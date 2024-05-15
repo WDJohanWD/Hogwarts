@@ -5,7 +5,11 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("%s%d", "HOla", 2);
+
+
+        Profesor snape = new Profesor("Snape","1111-11-11","si");
+        snape.explicar();
+        snape.imponerDisciplina();
     }
 
 }

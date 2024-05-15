@@ -1,8 +1,11 @@
 public class Mago extends Persona {
     private String tipoEscoba;
+    private Casa casa;
 
-    public Mago(String nombre, String fechaNac) {
+    public Mago(String nombre, String fechaNac, String tipoEscoba) {
         super(nombre, fechaNac);
+        this.tipoEscoba = tipoEscoba;
+        this.casa = null;
     }
 
     @Override
@@ -15,5 +18,11 @@ public class Mago extends Persona {
         return "El nombre del mago es: " + super.getNombre() + ", la fecha de" + " nacimiento es:" +
                 " " + super.getFechaNac() + "y el tipo de " + "escoba es: " + this.tipoEscoba;
 
+    }
+    public void setCasa(Casa casa) {
+        this.casa = casa;
+    }
+    public Casa getCasa() {
+        return casa;
     }
 }
