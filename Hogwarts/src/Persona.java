@@ -3,24 +3,26 @@ import java.time.temporal.ChronoUnit;
 
 public abstract class Persona {
 
-
     private String nombre;
     private LocalDate fechaNac;
     protected int edad;
 
 
-    public Persona(String nombre, String fechaNac) {
+    protected Persona(String nombre, String fechaNac) {
         this.nombre = nombre;
+        this.fechaNac = LocalDate.parse(fechaNac);
         this.edad = calcularEdad();
+
     }
 
     public abstract Boolean esMayor();
 
     protected int calcularEdad() {
         LocalDate fechaActual = LocalDate.now();
-        int years = (int) ChronoUnit.YEARS.between(fechaActual, this.fechaNac);
+        int years = (int) ChronoUnit.YEARS.between(this.fechaNac, fechaActual); // Cambio en el orden de los argumentos
         return years;
     }
+
 
     @Override
     public String toString() {

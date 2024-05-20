@@ -5,8 +5,8 @@ public class Mago extends Persona {
     public Mago(String nombre, String fechaNac, String tipoEscoba) {
         super(nombre, fechaNac);
         this.tipoEscoba = tipoEscoba;
-        this.casa = null;
     }
+
 
     @Override
     public Boolean esMayor() {
