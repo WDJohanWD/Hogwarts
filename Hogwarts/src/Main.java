@@ -5,14 +5,12 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        DAO baseDatos = new DAO("jdbc:mysql://localhost:3306/hogwarts","root", "");
 
-        Profesor snape = new Profesor("Snape","1111-11-11","si");
-        snape.explicar();
-        snape.imponerDisciplina();
-        Hogwarts hogwarts = new Hogwarts();
-        Mago Esteban = new Mago("Mago","2003-10-05","si");
-        hogwarts.añadirAlumno(Esteban);
-        System.out.println(Esteban.getCasa());
+        Mago harry = new Mago("Harry Potter","2003-10-05","si");
+
+
+        baseDatos.crearAlumno(harry);
     }
 
 }
