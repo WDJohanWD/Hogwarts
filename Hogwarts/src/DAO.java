@@ -32,6 +32,8 @@ public class DAO {
             /*Guarda todo el resultado de la sentencia*/
             ResultSet resultado = sentencia.executeQuery();
 
+            System.out.println("CAMBIO BORJA");
+
 
             if (resultado.next()) {
 
