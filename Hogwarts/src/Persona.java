@@ -27,7 +27,7 @@ public abstract class Persona {
     @Override
     public String toString() {
 
-        return "El nombre de la persona es: " + this.nombre + ", y la fecha de nacimiento es: " + this.fechaNac;
+        return "Su nombre es: " + this.nombre + ", y nació el: " + this.fechaNac;
     }
 
     public String getNombre() {
